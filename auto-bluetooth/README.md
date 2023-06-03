@@ -1,5 +1,3 @@
-# La clase AFMotor de la biblioteca Adafruit Motor Shield proporciona una variedad de métodos para controlar motores de corriente continua (DC) y motores paso a paso. 
-
 ## Lista de 20 métodos disponibles en la clase AFMotor:
  
 1.    AFMotor(uint8_t num): Constructor para crear una instancia de un motor específico en el shield.
