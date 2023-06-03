@@ -6,7 +6,7 @@ AF_DCMotor motor3(3);
 AF_DCMotor motor4(4);
 
 //Serial del BT
-SoftwareSerial BTSerial(2,3);
+SoftwareSerial BTSerial(13,2);
 
 int velocidad_ruedas = 200;
 
@@ -18,20 +18,22 @@ bool encendido4 = false;
 void setup() {
 
 //Velocidad de comunicacion en baudios
-  Serial.begin(9600);
-  BTSerial.begin(9600);
+ Serial.begin(9600);
+ BTSerial.begin(9600);
 
   motor3.setSpeed(velocidad_ruedas);
+  motor4.setSpeed(velocidad_ruedas);
+
   Serial.println("Inicio auto");
   
 }
 
 void loop() {
-
-  if(BTSerial.available()){
+  
+  while(BTSerial.available()==0){}
 
     String datos = BTSerial.readString();
-    Serial.println(datos);
+    Serial.println(datos +" cargados");
 
     if(datos.equalsIgnoreCase("motor3")){
       encendido3 = !encendido3;
@@ -52,6 +54,6 @@ void loop() {
         motor4.run(RELEASE);
       }
     }
-  }
+
   
 }
