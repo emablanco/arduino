@@ -1,3 +1,9 @@
+## HARDWARE 
+
+1. Par Motor Y Rueda De Goma Para Robot Rover Arduino Ptec
+1. Motor Shield Driver L293d Pap Dc Servo Arduino L293
+1. Arduino UNO 
+
 ## Lista de 20 métodos disponibles en la clase AFMotor:
  
 1.    AFMotor(uint8_t num): Constructor para crear una instancia de un motor específico en el shield.
