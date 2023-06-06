@@ -6,7 +6,10 @@ AF_DCMotor motor3(3);
 AF_DCMotor motor4(4);
 
 //Serial del BT
-SoftwareSerial BTSerial(13,2);
+//SoftwareSerial(rxPin, txPin, inverse_logic)
+SoftwareSerial BTSerial(10,9);
+//Servo 1 -> TX
+//Servo 2 -> Rx
 
 //velocidad de las ruedas
 int velocidad_ruedas = 200;

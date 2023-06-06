@@ -2,6 +2,8 @@
 
 1. Par Motor Y Rueda De Goma Para Robot Rover Arduino Ptec
 1. Motor Shield Driver L293d Pap Dc Servo Arduino L293
+    - El Servo 1 corresponde al pin 10 de Arduino.
+    - El Servo 2 corresponde al pin 9 de Arduino.  
 1. Arduino UNO 
 
 ## Lista de 20 métodos disponibles en la clase AFMotor:
