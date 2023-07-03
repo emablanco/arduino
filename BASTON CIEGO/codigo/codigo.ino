@@ -17,10 +17,10 @@ void loop() {
 
   // Calcula la distancia en base a la velocidad del sonido (aprox. 343 m/s)
   // y la mitad del tiempo de ida y vuelta del eco
-  float distance = duration * 0.0343 / 2;
+  float distancia = duracion * 0.0343 / 2;
 
   Serial.print("Distancia: ");
-  Serial.print(distance);
+  Serial.print(distancia);
   Serial.println(" cm");
   
   delay(1000);  // Espera 1 segundo antes de realizar la siguiente medición
