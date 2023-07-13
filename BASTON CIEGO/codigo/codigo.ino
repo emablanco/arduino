@@ -1,3 +1,4 @@
+int buzzer = 5;
 void setup() {
   Serial.begin(9600);
   pinMode(10, OUTPUT);  // TRIG como salida
@@ -22,6 +23,19 @@ void loop() {
   Serial.print("Distancia: ");
   Serial.print(distancia);
   Serial.println(" cm");
+
+  if(distancia <= 200){
+
+    int poder = map(distancia, 0,200,1,4);
+    
+    switch(poder){
+      case 1: tone(buzzer,400);break;
+      case 2: tone(buzzer,300);break;
+      case 3: tone(buzzer,200);break;
+      case 4: tone(buzzer,100);break;     
+    }
+  }
+  
   
   delay(1000);  // Espera 1 segundo antes de realizar la siguiente medición
 }

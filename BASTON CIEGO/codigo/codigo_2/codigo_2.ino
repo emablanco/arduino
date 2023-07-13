@@ -23,6 +23,17 @@ void loop() {
   Serial.print(distancia);
   Serial.println(" cm");
 
+    int poder = map(distancia, 0,200,1,4);
+     
+    switch(poder){
+      case 1: tone(buzzer,400);break;
+      case 2: tone(buzzer,300);break;
+      case 3: tone(buzzer,200);break;
+      case 4: tone(buzzer,100);break;     
+    }
+  }
+  
+
   // Esperar un breve período de tiempo antes de realizar la siguiente medición
   delay(500);
 }
