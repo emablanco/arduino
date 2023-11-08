@@ -1,20 +1,22 @@
 int buzzer = 5;
+int TRIG = 10;
+int ECHO = 11;
 void setup() {
   Serial.begin(9600);
-  pinMode(10, OUTPUT);  // TRIG como salida
-  pinMode(11, INPUT);   // ECHO como entrada
+  pinMode(TRIG, OUTPUT);  // TRIG como salida
+  pinMode(ECHO, INPUT);   // ECHO como entrada
 }
 
 void loop() {
   // Genera un pulso de 10 microsegundos en el pin TRIG
-  digitalWrite(10, LOW);
+  digitalWrite(TRIG, LOW);
   delayMicroseconds(2);
-  digitalWrite(10, HIGH);
+  digitalWrite(TRIG, HIGH);
   delayMicroseconds(10);
-  digitalWrite(10, LOW);
+  digitalWrite(TRIG, LOW);
 
   // Mide el tiempo que tarda en llegar el eco
-  long duracion = pulseIn(11, HIGH);
+  long duracion = pulseIn(ECHO, HIGH);
 
   // Calcula la distancia en base a la velocidad del sonido (aprox. 343 m/s)
   // y la mitad del tiempo de ida y vuelta del eco

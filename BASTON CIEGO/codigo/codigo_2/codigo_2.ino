@@ -6,10 +6,13 @@
 #define ECHO_PIN 3
 #define DISTANCIA_MAXIMA 200
 
+int buzzer =3;
+
 // Objeto NewPing para controlar el sensor
 NewPing sonar(TRIGGER_PIN, ECHO_PIN, DISTANCIA_MAXIMA);
 
 void setup() {
+  pinMode(buzzer, OUTPUT);
   // Inicialización del puerto serie
   Serial.begin(9600);
 }
@@ -31,7 +34,6 @@ void loop() {
       case 3: tone(buzzer,200);break;
       case 4: tone(buzzer,100);break;     
     }
-  }
   
 
   // Esperar un breve período de tiempo antes de realizar la siguiente medición
